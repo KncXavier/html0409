@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Tabuada</title>
+  <script lang="Javascript">
+  function tabuada()
+  {
+    var x, resultado, linha;
+    x = parseInt(document.frm.tab.value);
+    for(i = 1; i <= 10; i++)
+    {
+      resultado = x * i;
+      linha = x + "x" + i + " = " + resultado;
+      document.getElementById("tabuada").innerHTML += linha + "<br>";
+
+    }
+
+
+
+  }
+  </script>
+ </head>
+ <body>
+ 
+ <form name="frm">
+    <table align="center">
+    <tr>
+        <td><input type="text" name="tab" size="50" value="1"><br></td>
+    </tr>
+    <tr>
+    <td><input type="button" name="but" value="Calcular" onclick="tabuada();"><br></td>
+    </tr>
+    <tr>
+    <td><p id="tabuada"></p></td>
+    </tr>
+  </table>
+ </form>
+
+    
+
+ </body>
+</html>
